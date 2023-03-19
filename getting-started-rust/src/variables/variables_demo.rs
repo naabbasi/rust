@@ -4,7 +4,9 @@ pub fn variables(){
 
     let immutable_int: i128 = 1234567890;
     println!("Int variable i = {}", immutable_int);
-    let mut mutable_int: u128 = 1234567890;
+    let mut mutable_int = 1234567890;
+    println!("Int variable i = {}", mutable_int);
+    mutable_int = 0123456789;
     println!("Int variable i = {}", mutable_int);
 
     let guess: u32 = "42".parse().expect("Not a number!");

@@ -1,9 +1,9 @@
-pub fn variables(){
+pub fn variables() {
     const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
-    println!("Constant variable [THREE_HOURS_IN_SECONDS] = {} ", THREE_HOURS_IN_SECONDS);
+    log::info!("Constant variable [THREE_HOURS_IN_SECONDS] = {} ", THREE_HOURS_IN_SECONDS);
 
     let immutable_int: i128 = 1234567890;
-    println!("Int variable i = {}", immutable_int);
+    log::info!("Int variable i = {}", immutable_int);
     let mut mutable_int = 1234567890;
     println!("Int variable i = {}", mutable_int);
     mutable_int = 0123456789;

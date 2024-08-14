@@ -1,0 +1,11 @@
+[package]
+name = "rust"
+version = "0.1.0"
+authors = ["Nomann Ali <engr.nomiabbasi@gmail.com>"]
+edition = "2021"
+publish = false
+
+[workspace]
+members = [".", "actix-web", "getting-started-rust", "seaorm"]
+
+[dependencies]

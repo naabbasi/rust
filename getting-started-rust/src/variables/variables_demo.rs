@@ -1,3 +1,5 @@
+use std::any::type_name_of_val;
+
 pub fn variables() {
     const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
     log::info!("Constant variable [THREE_HOURS_IN_SECONDS] = {} ", THREE_HOURS_IN_SECONDS);
@@ -11,6 +13,9 @@ pub fn variables() {
 
     let guess: u32 = "42".parse().expect("Not a number!");
     println!("Cast variable from string to int {}", guess);
+
+    println!("variable immutable_int type is: {}", type_name_of_val(&immutable_int));
+    println!("variable guess type is: {}", type_name_of_val(&guess));
 
     println!("Variable shadowing");
     shadowing();

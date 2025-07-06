@@ -1,9 +1,9 @@
 pub mod traits_overloading {
-    trait Foo {
+    pub trait Foo {
         fn foo(self);
     }
 
-    pub fn foo(x: impl Foo) {
+    pub(crate) fn foo(x: impl Foo) {
         Foo::foo(x)
     }
 

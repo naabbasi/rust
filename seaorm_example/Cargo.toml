@@ -1,9 +1,9 @@
 [package]
-name = "seaorm"
+name = "seaorm_example"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-sea-orm = { version = "1.0.0", features = ["sqlx-postgres", "runtime-tokio" , "macros" ] }
+sea-orm = { version = "1.0.0", features = ["sqlx-postgres", "runtime-tokio", "macros"] }
 tokio = { version = "1.0.0", features = ["rt", "rt-multi-thread", "macros"] }
 log = "0.4.22"

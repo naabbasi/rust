@@ -61,7 +61,7 @@ type DbPool = r2d2::Pool<r2d2::ConnectionManager<SqliteConnection>>;
 #[actix_web::main]
 async fn main() -> io::Result<()> {
     // connect to SQLite DB
-    let manager = r2d2::ConnectionManager::<SqliteConnection>::new("app.db");
+    let manager = r2d2::ConnectionManager::<SqliteConnection>::new("app.db_example");
     let pool = r2d2::Pool::builder()
         .build(manager)
         .expect("database URL should be valid path to SQLite DB file");
@@ -88,7 +88,7 @@ async fn index(
     let user = web::block(move || {
         // Obtaining a connection from the pool is also a potentially blocking operation.
         // So, it should be called within the `web::block` closure, as well.
-        let mut conn = pool.get().expect("couldn't get db connection from pool");
+        let mut conn = pool.get().expect("couldn't get db_example connection from pool");
 
         insert_new_user(&mut conn, name)
     })

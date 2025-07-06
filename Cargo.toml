@@ -1,11 +1,4 @@
-[package]
-name = "rust"
-version = "0.1.0"
-authors = ["Nomann Ali <engr.nomiabbasi@gmail.com>"]
-edition = "2021"
-publish = false
-
 [workspace]
-members = [".", "actix", "getting-started-rust", "seaorm"]
+resolver = "1"
 
-[dependencies]
+members = ["getting-started-rust", "math_lib", "actix", "seaorm_example", "db_example"]

@@ -43,3 +43,21 @@ fn main() {
     //helloworld_postgresql::db_postgresql::test().expect("Unable to perform db_example operations");
     //db_example::helloworld();
 }
+
+#[cfg(test)]
+mod tests {
+    use math_lib;
+    use super::*;
+
+    #[test]
+    fn check_add() {
+        let result = math_lib::add(2, 2);
+        assert_eq!(result, 4);
+    }
+
+    #[test]
+    fn check_divide() {
+        let divide = math_lib::divide(2, 2);
+        assert_eq!(divide.unwrap(), 1);
+    }
+}

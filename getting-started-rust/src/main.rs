@@ -6,8 +6,8 @@ mod variable_demo;
 #[path = "variables/arrays.rs"]
 mod array_demo;
 
-#[path = "traits/traits_overloading.rs"]
-mod traits_overloading;
+#[path = "traits/trait_demo.rs"]
+mod trait_overloading;
 
 fn main() {
     info!("Hello, world!");
@@ -37,9 +37,9 @@ fn main() {
     let p3 = p1.mixup(p2);
     println!("p3.x = {}, p3.y = {}", p3.x, p3.y);*/
 
-    traits_overloading::traits_overloading::foo(1);
-    traits_overloading::traits_overloading::foo(11.1);
-    traits_overloading::traits_overloading::foo("string");
+    trait_overloading::traits_overloading::foo(1);
+    trait_overloading::traits_overloading::foo(11.1);
+    trait_overloading::traits_overloading::foo("string");
     //helloworld_postgresql::db_postgresql::test().expect("Unable to perform db_example operations");
     //db_example::helloworld();
 }
